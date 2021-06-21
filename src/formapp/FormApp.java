@@ -24,7 +24,7 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-class dbmsconnection{
+class dbmscon{
 
     public Connection getConnection() throws Exception{
         Connection con;
@@ -61,7 +61,7 @@ class Visitor{
     
     static int getCount(String g){
         try{
-            dbmsconnection dbmsconnect=new dbmsconnection();
+            dbmscon dbmsconnect=new dbmscon();
             Connection conn=dbmsconnect.getConnection();
             String query = "select count(*) from Visitors WHERE role=?";
             PreparedStatement stmt1=conn.prepareStatement(query);
